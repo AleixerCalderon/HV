@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleixer Alvarado Bernal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Chakra+Petch:wght@300&family=Inconsolata:wght@300&family=Prompt&family=Spline+Sans+Mono:wght@300&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background: #eeeee2;
+            /* font-family: 'Montserrat', sans-serif; */
+            font-family: 'Inconsolata', monospace;
+        }
+
+        p {
+            font-size: 1.3em;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Caveat', cursive;
+            display: flex;
+            align-items: baseline;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+
+        .aab-img-panel {
+            width: 100%;
+            margin: auto;
+            display: flex;
+        }
+
+        .aab-card-p {
+            margin: 50px 10%;
+            border-radius: 7px;
+            min-width: 680px;
+            z-index: 0;
+            position: relative;
+        }
+
+        .aab-card-content {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #aab-menu {
+            padding: 4% 1% 0;
+            margin-bottom: 15px;
+        }
+
+        .imagen-code {
+            background-image: url(img/code.png);
+            width: 100px;
+            height: 100px;
+            background-position: initial;
+            z-index: 9;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: abrirCodigo 1s forwards linear;
+        }
+
+        @keyframes abrirCodigo {
+            0% {
+                width: 0px;
+                height: 0px;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @keyframes abrirHoja {
+            0% {
+                border-bottom: 0px solid #eee;
+                border-left: 0px solid transparent;
+            }
+
+            100% {
+                border-bottom: 100px solid #eee;
+                border-left: 100px solid transparent;
+            }
+        }
+
+        @keyframes abrirHojaSombra {
+            0% {
+                width: 0px;
+                height: 0px;
+                margin: 0px;
+            }
+
+            100% {
+                width: 146px;
+                height: 145px;
+                margin: 28px;
+            }
+        }
+
+        .imagen-code::before {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-bottom: 100px solid #eee;
+            border-left: 100px solid transparent;
+            -webkit-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+            box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+            animation: abrirHoja 1s forwards linear;
+        }
+
+        .imagen-code::after {
+            content: "";
+            position: absolute;
+            width: 146px;
+            height: 145px;
+            -moz-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 26px 0px 10px -21px #5e5e5e;
+            transform: rotate(45deg);
+            margin: 28px;
+            animation: abrirHojaSombra 1s forwards linear;
+        }
+
+        .food {
+            width: 100%;
+            height: 30px;
+            bottom: 2px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bandera-col {
+            width: 25px;
+            height: 5px;
+            border-top: 10px solid yellow;
+            background-color: blue;
+            border-bottom: 5px solid red;
+            margin-top: -5px;
+            margin-left: 5px;
+        }
+
+        .icon {
+            color: white;
+            height: 19px;
+            width: 35px;
+            padding: 0px 5px 8px;
+            font-size: 17px;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Prompt', sans-serif;
+
+        }
+
+        .icon:hover {
+            height: 18px;
+            transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .net {
+            background-color: blueviolet;
+
+        }
+
+        .sql {
+            background-color: rgb(39, 111, 254);
+        }
+
+        .js {
+            background-color: #fcdc00;
+            color: black !important;
+        }
+
+        .ang {
+            background-color: #c3002f;
+        }
+
+        .azure {
+            background-color: #0078d4;
+        }
+
+        .gracias-text {
+            display: flex;
+            justify-content: flex-end;
+            bottom: 5px;
+            padding-bottom: 9px;
+            color: #616262;
+        }
+
+        .csharp {
+            font-size: 60vh;
+            position: absolute;
+            /* margin-top: 58px;
+            margin-left: 26px; */
+            color: #ffffff42;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .aab-main-menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+        }
+
+        .aab-main-menu div {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 1px solid rgb(238, 238, 238);
+            opacity: 0.7;
+        }
+
+        #quien-icon {
+            background-image: url(img/emoji_people.svg);
+        }
+
+        #contacto-icon {
+            background-image: url(img/person_search.svg);
+        }
+
+        #experiencia-icon {
+            background-image: url(img/rocket_launch.svg);
+        }
+
+        #tecnologias-icon {
+            background-image: url(img/military_tech.svg);
+        }
+
+        #certificados-icon {
+            background-image: url(img/workspace_premiun.svg);
+        }
+
+        #hobbies-icon {
+            background-image: url(img/local_library.svg);
+        }
+
+        .aab-icon-menu {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 70px;
+        }
+
+        .aab-title-menu {
+            font-size: 17px;
+            margin: auto;
+            display: table;
+            text-align: center;
+        }
+
+        .aab-icon-menu:hover {
+            opacity: 1;
+            background-size: 90px;
+            cursor: pointer;
+            transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
+        }
+
+        * {
+            transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
+        }
+
+        .aab-card {
+            padding: 5px 31px;
+            display: flex;
+            margin-top: -45px;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .aab-card>div {
+            width: 50%;
+            padding: 15px;
+        }
+
+        .aab-card-linea {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .aab-back {
+            background-image: url(img/reply_all.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 50px;
+            height: 60px;
+            width: 60px;
+            display: block;
+            margin: 9px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .aab-back:hover {
+            opacity: .8;
+            background-size: 60px;
+            cursor: pointer;
+            transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
+
+        }
+
+
+
+        .aab-linea-ex {
+            /* height: 160px; */
+            width: 80vh;
+            /* background: blueviolet; */
+            margin: 10px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-between;
+        }
+
+        .aab-linea-ex span {
+            font-size: 2em;
+            /* position: absolute; */
+            display: table;
+            /* flex-wrap: wrap; */
+            margin: auto;
+        }
+
+        .aab-linea-centro {
+            background: #05a2fe;
+            width: 5px;
+            height: 113px;
+        }
+
+        /* .aab-l-right::before {
+            content: "2007";
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #2196F3;
+            position: absolute;
+            margin-left: -38px;
+            margin-top: 24px;
+            text-align: center;
+            color: white;
+        }
+
+        .aab-l-left::after {
+            content: "2007";
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #2196F3;
+            position: absolute;
+            margin-left: 67vh;
+            margin-top: 24px;
+            text-align: center;
+            color: white;
+        } */
+
+        .pr {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #00a4d2;
+            position: absolute;
+            /* left: 0; */
+            margin-left: -38px;
+            color: white;
+            display: flex;
+            text-align: center;
+            /* padding-top: 5px; */
+            align-content: space-around;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 27px;
+        }
+
+        .aab-panel {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .aab-panel h2 {
+            position: absolute;
+            color: rgb(78, 78, 78);
+            margin-left: 50px;
+            background: #ffffff78;
+            border-radius: 0px 42px;
+            padding: 5px 16px;
+        }
+
+        .aab-card-min {
+            background-color: #000000;
+            width: 30em;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: absolute;
+            right: 2em;
+            padding: 15px;
+            border-radius: 7px;
+            /* opacity: .8; */
+            z-index: 9;
+            top: 2em;
+            bottom: 2em;
+            color: white;
+        }
+
+        .aab-color-net {
+            color: #b34ec6;
+        }
+
+        .aab-color-AR {
+            color: #FF5722;
+        }
+
+        .aab-color-android {
+            color: #48f61d;
+        }
+
+        .aab-color-js {
+            color: #ffff05;
+        }
+
+        .aab-color-python {
+            color: #377d91;
+        }
+
+        .aab-color-azure {
+            color: #009688;
+        }
+
+        .aab-img-c {
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        .aab-li {
+            margin: auto;
+        }
+
+        .aab-fondo-lecturas {
+            background: antiquewhite;
+            background: #c2e7f9;
+        }
+
+        .aab-triangulo {
+            width: 36px;
+            height: 0;
+            border-right: 50px solid #ffffff00;
+            border-left: 50px solid transparent;
+            border-bottom: 213px solid #ffffffa6;
+        }
+
+        .aab-lecturas-lam {
+            width: 70px;
+            height: 3px;
+            background-color: black;
+            margin-top: -30px;
+            position: absolute;
+            margin-left: -51px;
+        }
+
+        .aab-triangulo::after {
+            content: url(img/book.svg);
+            width: 100px;
+            height: 10px;
+            /* box-shadow: 1px 1px 1px 1px black; */
+            margin-top: 115px;
+            position: absolute;
+            margin-left: -7px;
+        }
+
+        .aab-triangulo::before {
+            content: url(img/light.svg);
+            /* width: 100px; */
+            /* height: 10px; */
+            /* box-shadow: 1px 1px 1px 1px black; */
+            /* top: 0; */
+            margin-top: -33px;
+            position: absolute;
+            margin-left: -7px;
+        }
+
+        .aab-lecturas {
+            margin-top: -154px;
+        }
+
+        .aab-empresa {
+            background: #d7dee4;
+            border-radius: 10px;
+            margin: 0px 49px;
+            padding: 2px 10px;
+        }
+
+        .aab-libros-recomendados {
+            margin-right: 25px;
+            margin-left: 100px;
+
+        }
+
+        .aab-cortina-panel {
+            width: 96em;
+            height: 30em;
+            transform: rotate(330deg);
+            background: #00bbf278;
+            top: 12em;
+            position: absolute;
+            right: -23em;
+        }
+
+        .aab-cortina-panel::before {
+            content: "";
+            width: 70em;
+            height: 30em;
+            transform: rotate(330deg);
+            background: #69207991;
+            top: 6em;
+            position: absolute;
+            right: -20em;
+        }
+
+
+        .aab-favoritos {
+            font-size: .97em;
+        }
+        .aab-punto{
+animation: codigo 1s linear infinite;
+        }
+        @keyframes codigo {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        /* .aab-panel-titulo{
+            background: #0078d4;
+        } */
+    </style>
+    <script>
+        function desplegar(linkText) {
+            const quie = document.getElementById(linkText).offsetTop;
+            scroll({ top: quie, behavior: "smooth" });
+        }        
+    </script>
+</head>
+
+<body>
+    <div class="imagen-code"></div>
+    <div class="aab-card-p">
+        <div id="aab-menu" class="aab-card-content">
+            <span class="aab-back" onclick="desplegar('aab-menu')"></span>
+            <div class="aab-main-menu" id="main-menu">
+                <div class="aab-icon-menu" id="quien-icon" onclick="desplegar('quienSoy')"> <samp
+                        class="aab-title-menu"> Quien Soy </samp>
+                </div>
+                <div class="aab-icon-menu" id="tecnologias-icon" onclick="desplegar('tecnologias')"><samp
+                        class="aab-title-menu"> Tecnologías
+                    </samp></div>
+                <div class="aab-icon-menu" id="experiencia-icon" onclick="desplegar('experiencia')"><samp
+                        class="aab-title-menu"> Experiencia
+                    </samp></div>
+                <!-- <div class="aab-icon-menu" id="certificados-icon" onclick="desplegar('certificados')"><samp
+                        class="aab-title-menu">
+                        Certificados </samp>
+                </div> -->
+                <div class="aab-icon-menu" id="hobbies-icon" onclick="desplegar('hobbies')"><samp
+                        class="aab-title-menu">
+                        Hobbies </samp>
+                </div>
+                <div class="aab-icon-menu" id="contacto-icon" onclick="desplegar('contacto')"> <samp
+                        class="aab-title-menu"> Contacto
+                    </samp></div>
+            </div>
+        </div>
+        <div id="card" class="aab-card-content">
+
+            <div class="aab-panel">
+                <div class="aab-panel-titulo">
+                    <h2> &lt;/Software-Developer&gt; </h2>
+                </div>
+                <div class="aab-card-min">
+                    <h3>Mis tecnologías favoritas <span class="aab-punto">.</span></h3>
+
+                    <p class="aab-favoritos">
+                        <strong class="aab-color-AR"> Angular, React:</strong>
+                        Conjunto de librerías en JavaScript o typescript dirigidas a la construcción de aplicaciones
+                        SPA.
+                    </p>
+                    <p class="aab-favoritos">
+                        <strong class="aab-color-net"> .NET, SQL Server:</strong>
+                        Hacen parte del ecosistema de Microsoft, para el desarrollo de aplicaciones en múltiples
+                        plataformas.
+                    </p>
+
+                    <p class="aab-favoritos">
+                        <strong class="aab-color-android"> Android, Xamarin:</strong>
+                        Android Studio (JAVA) o Xamarin (C#), son entornos de desarrollo enfocados en aplicaciones
+                        móviles.
+                    </p>
+
+                    <p class="aab-favoritos">
+                        <strong class="aab-color-js"> JavaScript, HTML, CSS:</strong>
+                        Son tres tecnologías fundamentales en el desarrollo web, las cuales aportan estructura,
+                        dinamismo y diseño a las aplicaciones web, las cuales se ejecutan en el navegador de los
+                        usuarios.
+                    </p>
+
+                    <p class="aab-favoritos">
+                        <strong class="aab-color-python"> Python:</strong>
+                        Lenguaje interpretado, usado ampliamente en el desarrollo de soluciones con IA y análisis de
+                        datos.
+                    </p>
+
+                    <p class="aab-favoritos">
+                        <strong class="aab-color-azure"> Azure:</strong>
+                        Plataforma en la nube de Microsoft que ofrece una amplia gama de servicios para construir y
+                        administrar aplicaciones en la nube de manera eficiente y escalable.
+                    </p>
+
+
+
+
+                </div>
+                <div id="wrapper">
+                    <div class="cube" id="cubeA">
+                        <!--Front-->
+                        <div>.Net</div>
+                        <!--Back-->
+                        <div>SQL</div>
+                        <!--Left-->
+                        <div>.JS</div>
+                        <!--Right-->
+                        <div>A</div>
+                        <!--Top-->
+                        <div>Az</div>
+                        <!--Bottom-->
+                        <div>Ad</div>
+                    </div>
+                </div>
+                <div class="neural-network"></div>
+                <img src="img/ArbColombia.png" alt="" class="aab-img-panel">
+                <span class="aab-pie">Foto:Aleixer Alvarado/Venecia - Cundinamarca</span>
+                <div class="aab-cortina-panel"></div>
+
+
+            </div>
+
+            <div id="quienSoy">
+                <h1>Aleixer Alvarado Bernal</h1>
+                <div class="aab-card" id="card-text">
+                    <div>
+
+                        <p>
+                            Hola, soy desarrollador web senior con una amplia experiencia en <strong> .NET. </strong>
+                            <br>
+                            Durante los
+                            últimos 10 años, he trabajado en diversos proyectos web, desde pequeñas aplicaciones hasta
+                            grandes
+                            sistemas empresariales.
+                        </p>
+                        <p>
+                            Mi experiencia y habilidades técnicas me permiten desarrollar soluciones
+                            robustas y escalables, que satisfacen las necesidades y expectativas de mis clientes.
+                        </p>
+                    </div>
+                    <div>
+
+                        <p>
+                            Soy un apasionado de la tecnología y siempre estoy actualizándome en las últimas tendencias
+                            y
+                            herramientas en el desarrollo web. Me encanta trabajar en equipo y colaborar con colegas
+                            para
+                            lograr
+                            los
+                            objetivos y metas del proyecto. Además, soy una persona organizada y detallista, que presta
+                            atención
+                            a
+                            los detalles y la calidad del trabajo.
+                        </p>
+                        <p>
+                            Estoy emocionado de seguir creciendo en mi carrera como desarrollador web y de contribuir
+                            con
+                            mis
+                            habilidades y conocimientos para desarrollar soluciones innovadoras y eficientes.
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div id="tecnologias">
+                <h2> Tecnologias </h2>
+                <div class="aab-card">
+                    <div>
+
+                        <p>
+                            Como desarrollador web senior en .NET, tengo amplia experiencia en el desarrollo de
+                            aplicaciones
+                            web con tecnologías tanto front-end como back-end. En cuanto al back-end, he trabajado con
+                            ASP.NET y C#, mientras que en el front-end he utilizado JavaScript, Angular y React. También
+                            tengo experiencia en el desarrollo de aplicaciones móviles utilizando Xamarin. En cuanto a
+                            las
+                            bases de datos, he trabajado con SQL Server, MySQL y MongoDB, tanto en bases de datos
+                            relacionales como no relacionales. Estoy siempre en constante aprendizaje y actualización de
+                            las
+                            últimas tendencias y herramientas en el desarrollo web para poder ofrecer soluciones
+                            innovadoras
+                            y eficientes.
+                        </p>
+
+                    </div>
+                    <div>
+                        <p>
+                        <div id="aabLogo">
+                            <div class="aab-img-fondo"></div>
+                            <!-- <img src="img/fondo.png" class="aab-img-fondo" alt=""> -->
+                            <div class="aab-circulo">
+                                <div class="aab-csharp"></div>
+                                <div class="aab-icon-net"></div>
+                                <div class="aab-icon-html"></div>
+                                <div class="aab-icon-js"></div>
+                                <div class="aab-icon-css">
+                                    <div class="aab-icon-css-img"></div>
+                                </div>
+                            </div>
+                            <div class="aab-compu">
+                                <div class="aab-pantalla">
+                                    <div class="aab-pantalla-color"></div>
+                                    <div id="aab-icon-vs"></div>
+                                    <div id="aab-icon-mi"></div>
+                                </div>
+                                <div class="aab-taclado">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <img src="img/maxresdefault.jpg" alt="" class="aab-img-c"></p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="aab-card-linea" id="experiencia">
+                <h2> Experiencia</h2>
+                <div class="aab-card">
+                    <div>
+
+                        <p>
+                            <img src="img/factory.svg" alt="">
+                            Quiero expresar mi más sincero agradecimiento a todas las compañías por las que he tenido el
+                            privilegio de trabajar a lo largo de mi carrera profesional. Cada una de ellas ha
+                            desempeñado un
+                            papel fundamental en mi crecimiento tanto personal como profesional, y estoy enormemente
+                            agradecido
+                            por las oportunidades y experiencias que me han brindado.
+                        </p>
+                        <p>
+                            <img src="img/groups.svg" alt="">
+                            Agradezco a todas las compañías por haberme brindado un entorno de trabajo enriquecedor,
+                            lleno de
+                            desafíos y aprendizajes.
+                        </p>
+                        <!-- <p>
+                    <img src="img/factory.svg" alt="" >
+                    <img src="img/groups.svg" alt="" >
+                    <img src="img/local_cafe.svg" alt="" >
+                    <img src="img/manage_accounts.svg" alt="" >
+                </p> -->
+                    </div>
+                    <div>
+
+                        <p>
+                            <img src="img/local_cafe.svg" alt=""> También quiero agradecer a mis compañeros de trabajo, cuyo
+                            apoyo y
+                            colaboración han sido invaluables. Sus conocimientos, habilidades y perspectivas únicas han
+                            contribuido significativamente a mi desarrollo profesional.
+                        </p>
+                        <p>
+                            <img src="img/manage_accounts.svg" alt="">
+                            Además, deseo expresar mi gratitud a mis líderes y mentores en cada una de las compañías. Su
+                            orientación, consejos y mentoría han sido fundamentales para mi crecimiento y éxito
+                            profesional. Su
+                            confianza en mí y su apoyo constante me han impulsado a superar mis límites y alcanzar metas
+                            que
+                            antes parecían inalcanzables.
+                            <!-- 
+                        
+                        No puedo dejar de reconocer el valioso apoyo de todos aquellos con los que he tenido el privilegio
+                        de colaborar. Sus contribuciones, ideas y trabajo en equipo han sido esenciales en el logro de
+                        nuestros objetivos comunes. Juntos, hemos superado desafíos, aprendido de nuestras experiencias y
+                        creado un ambiente de trabajo en el que todos hemos tenido la oportunidad de crecer y
+                        desarrollarnos.
+                        Agradezco a todas las compañías por su confianza en mí y por brindarme un entorno en el que he
+                        podido prosperar y alcanzar mi potencial. Estoy lleno de gratitud por el apoyo constante de mis
+                        compañeros y líderes, quienes han sido una fuente de inspiración y motivación a lo largo de mi
+                        trayectoria profesional. -->
+
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="aab-linea-ex aab-l-right">
+                        <div class="aab-empresa">
+                            <span>Manetty</span>
+                            <p> Compañía de confección, cuya marca principal es Linuras, en donde contribuí durante 10
+                                años en sus plataformas tecnologías. </p>
+                        </div>
+
+                        <div class="pr">2007-2018</div>
+                    </div>
+                    <div class="aab-linea-ex aab-l-left">
+                        <div class="aab-empresa">
+                            <span>Imaginamos</span>
+                            <p> Fabrica de software, dedicada a generar soluciones escalables según las necesidades de
+                                los clientes. </p>
+                        </div>
+                        <div class="pr">2018-2019</div>
+                    </div>
+                    <div class="aab-linea-ex aab-l-right">
+                        <div class="aab-empresa">
+                            <span>Sii-group</span>
+                            <p> Sii Group es un partner global líder en el apoyo a la transformación digital de
+                                organizaciones de todos los tamaños y sectores. Son más de 10,000 especialistas
+                                altamente capacitados con experiencia en una amplia variedad de tecnologías y
+                                soluciones, ofrecemos una completa gama de servicios TI que incluyen consultoría
+                                estratégica, desarrollo de aplicaciones, infraestructura, seguridad cibernética,
+                                inteligencia artificial y mucho más. </p>
+                        </div>
+                        <div class="pr">2019-2021</div>
+                    </div>
+                    <div class="aab-linea-ex aab-l-right">
+                        <div class="aab-empresa">
+                            <span>Softtek</span>
+                            <p> Fundada en 1982 por un pequeño grupo de emprendedores, Softtek comenzó en México
+                                proporcionando servicios de TI locales y hoy es un líder global en soluciones digitales
+                                de próxima generación. La primera compañía en introducir el modelo Nearshore, Softtek
+                                ayuda a las empresas Global 2000 a desarrollar capacidades digitales de manera fluida y
+                                constante. </p>
+                        </div>
+                        <div class="pr">2021-....</div>
+                    </div>
+
+                </div>
+
+                <div>
+
+                </div>
+
+            </div>
+            <!-- <div class="aab-card-linea" id="certificados">
+                <h2> Certificados</h2>
+                <div>
+                    certificados
+                </div>
+
+            </div> -->
+
+            <div class="aab-card-linea aab-fondo-lecturas" id="hobbies">
+                <h2> Hobbies</h2>
+                <div class="aab-card">
+                    <div>
+                        <p>
+                            Me encanta sumergirme en las páginas de los libros y explorar nuevos mundos a través de la
+                            lectura. La literatura me brinda la oportunidad de aprender, crecer y experimentar emociones
+                            únicas.
+                            Disfruto de diferentes géneros, desde novelas de ficción hasta ensayos filosóficos,
+                            siempre buscando expandir mis horizontes intelectuales.
+                        </p>
+                        <p>
+                            Cuando no estoy inmerso en las páginas, me puedes encontrar pedaleando en mi bicicleta.
+                            <br>
+                            Montar en bicicleta es una pasión que combina el ejercicio físico, la conexión con la
+                            naturaleza y la sensación de libertad.
+                            Me encanta explorar nuevos caminos, descubrir paisajes fascinantes y
+                            disfrutar del aire fresco mientras recorro rutas escénicas.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Pero lo que hace que estas actividades sean aún más especiales es compartirlas con mi
+                            familia.
+                            <br>
+                            Disfruto enormemente de estos momentos junto a mi esposa e hijos, ya que son experiencias
+                            que fortalecen nuestros lazos y crean recuerdos inolvidables.
+                            Tanto la lectura como el ciclismo nos permiten explorar juntos, aprender y divertirnos en
+                            familia.
+                        </p>
+                        <p>
+                            Estos hobbies son mi escape y mi forma de encontrar armonía en un mundo acelerado, pero
+                            compartirlos con mi familia los convierte en algo verdaderamente significativo. Nos
+                            sumergimos en libros juntos, compartimos historias y aventuras, y nos embarcamos en
+                            emocionantes paseos en
+                            bicicleta que nos permiten disfrutar de la naturaleza y crear momentos de conexión y
+                            felicidad duraderos.
+                        </p>
+                    </div>
+                </div>
+                <h2> Lecturas</h2>
+                <div class="aab-libros-recomendados">
+                    <h3>Platon</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reiciendis recusandae
+                            consequatur officiis facere iusto maxime dignissimos culpa id, architecto eius earum debitis
+                            ut minus itaque dolores facilis, inventore quo?
+                        </p>
+                    </div>
+                </div>
+                <!-- <ul class="aab-li">
+                    <li>Platon</li>
+                    <li> IA</li>
+                    <li>Angular</li>
+                    <li>React</li>
+                    <li>Android</li>
+                    <li>Xamarin</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Pythonr</li>
+                    <li>Azure</li>
+                </ul> -->
+                <div class="aab-lecturas">
+                    <div class="aab-triangulo">
+                        <div class="aab-lecturas-lam"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="aab-card-linea" id="contacto">
+                <h2> Contacto</h2>
+                <div class="aab-card">
+                    <div>
+                        <p>
+                            Estoy muy agradecido por el tiempo que tomas para ver mi presentación, Pongo a disposición
+                            mi
+                            conocimiento y competencia profesional, si deseas ponerte en contacto conmigo te dejo mis
+                            datos
+                            a continuación, será muy grato atenderte.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                        <ul class="aab-li">
+                            <li>Email: aleixer.alvarado@outlook.com</li>
+                            <li>Móvil: 324 537 38 66</li>
+                            <li>Dirección: Bogota, Colombia. </li>
+                            <li>LinkedIn: https://www.linkedin.com/in/aleixer-alvarado-bernal </li>
+                            <li>GitHub: https://github.com/abaleixer</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="gracias-text">
+                <em>¡Gracias por visitar
+                    mi curriculum!</em>
+                <div class="bandera-col"></div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #wrapper {
+            position: absolute;
+            /* right: 0;
+            top: 30px; */
+            top: 10em;
+            left: 10em;
+        }
+
+
+        .cube {
+            position: relative;
+            width: 100px;
+            height: 250px;
+            transform-style: preserve-3d;
+            /* transform: rotateY(35deg) rotatex(-38deg); */
+            animation: identifier 20s infinite linear;
+        }
+
+
+        @keyframes identifier {
+            0% {
+                transform: rotateY(0deg) rotatex(0deg);
+            }
+
+            100% {
+                transform: rotateY(359deg) rotatex(359deg);
+            }
+        }
+
+        @keyframes identifierM {
+            0% {
+                transform: rotateX(0deg) rotatex(0deg);
+            }
+
+            100% {
+                transform: rotateX(0deg) rotatex(360deg);
+            }
+        }
+
+        .cube div {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.1);
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            text-align: center;
+            /* font-weight: bold; */
+            font-family: 'Prompt', sans-serif;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        .cube div:nth-child(1) {
+            transform: translateZ(20px);
+            background-color: blueviolet;
+        }
+
+        .cube div:nth-child(2) {
+            transform: rotateX(180deg) translateZ(20px);
+            background-color: rgb(39, 111, 254);
+        }
+
+        .cube div:nth-child(3) {
+            transform: rotateY(-90deg) translateZ(20px);
+            background-color: #fcdc00;
+            color: black !important;
+        }
+
+
+        .cube div:nth-child(4) {
+            transform: rotateY(90deg) translateZ(20px);
+            background-color: #c3002f;
+        }
+
+        .cube div:nth-child(5) {
+            transform: rotateX(90deg) translateZ(20px);
+            background-color: #0078d4;
+        }
+
+        .cube div:nth-child(6) {
+            transform: rotateX(-90deg) translateZ(20px);
+            background: #8fc054;
+            ;
+        }
+    </style>
+    <style>
+        #aabLogo {
+            margin: auto;
+            display: table;
+            width: 24em;
+            height: 28em;
+            position: relative;
+        }
+
+        .aab-img-fondo {
+            background-image: url(img/fondo.png);
+            background-position: top;
+            /* background-repeat-y: no-repeat; */
+            background-size: 87%;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+        }
+
+        /* width: 88%;
+    opacity: .5;
+} */
+
+        .aab-compu {
+            z-index: 10;
+            position: absolute;
+            position: absolute;
+            top: 19%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .aab-pantalla {
+            width: 14em;
+            height: 6.6em;
+            border-bottom: 30px solid rgb(105 32 121);
+            border-top: 15px solid rgb(105 32 121);
+            border-left: 15px solid rgb(105 32 121);
+            border-right: 15px solid rgb(105 32 121);
+            border-radius: 15px;
+            background: rgb(179 78 198);
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .aab-pantalla-color {
+            height: 11.5em;
+            width: 3.5em;
+            background: rgb(254 245 219 / 40%);
+            transform: rotate(319deg);
+            float: right;
+            margin-top: -58px;
+            margin-right: -42px;
+        }
+
+        .aab-taclado {
+            width: 15em;
+            height: 0px;
+            border-bottom: 30px solid rgb(105 32 121);
+            border-top: 15px solid rgb(179 78 198);
+            border-left: 14px solid rgb(105 32 121);
+            border-right: 14px solid rgb(105 32 121);
+            border-radius: 24px;
+            border-top-left-radius: 73px;
+            margin: auto;
+            border-top-right-radius: 73px;
+        }
+
+        #aab-icon-mi {
+            background-image: url(img/microsoft.svg);
+            width: 10px;
+            height: 10px;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            color: white;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            margin-top: 7em;
+            z-index: 9;
+            margin-left: 7em;
+            /* -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1); */
+            animation: onPcIcon 2s infinite alternate;
+        }
+
+        #aab-icon-vs {
+            background-image: url(img/vs.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 3.8em;
+            height: 3.8em;
+            position: absolute;
+            color: white;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            margin-top: 1.4em;
+            z-index: 9;
+            margin-left: 5.2em;
+            /* -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1); */
+            animation: onPc 5s infinite alternate;
+        }
+
+        @keyframes onPc {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes onPcIcon {
+            0% {
+                opacity: .5;
+            }
+
+            100% {
+                -webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);
+                opacity: 1;
+            }
+        }
+
+        .aab-csharp {
+            background-image: url(img/csharp.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 3.8em;
+            height: 3.8em;
+        }
+
+        .aab-circulo {
+            /* width: 24em; */
+            height: 12em;
+            border: 5px dashed #692079d9;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 2.5em;
+        }
+
+        .aab-icon-css {
+            width: 3.5em;
+            height: 3.8em;
+        }
+
+        .aab-icon-net {
+            width: 4.9em;
+            height: 0px;
+            background: #707070;
+            border-bottom: 2.45em solid #b34ec6;
+            border-top: 2.45em solid #9440a2;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -32px;
+            left: 5.95em;
+        }
+
+        .aab-icon-net::after {
+            content: ".NET";
+            color: white;
+            font-size: 1.5em;
+            position: absolute;
+            transform: rotate(315deg);
+            font-weight: bold;
+            margin-left: 14px;
+            margin-top: -14px;
+        }
+
+        .aab-icon-html {
+            width: 3.5em;
+            height: 0px;
+            background: #707070;
+            border-bottom: 1.75em solid #00bbf2;
+            border-top: 1.75em solid #00a4d2;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            position: absolute;
+
+            top: -32px;
+            left: 11.9em;
+        }
+
+        .aab-icon-html::after {
+            content: "HTML";
+            color: white;
+            font-size: 1.2em;
+            position: absolute;
+            transform: rotate(315deg);
+            font-weight: bold;
+            margin-left: 7px;
+            margin-top: -14px;
+        }
+
+        .aab-icon-js {
+            width: 3.5em;
+            height: 0px;
+            background: #707070;
+            border-bottom: 1.75em solid #692079;
+            border-top: 1.75em solid #551c62;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -23px;
+            left: 16.45em;
+        }
+
+        .aab-icon-js::after {
+            content: "Js";
+            color: white;
+            font-size: 1.9em;
+            position: absolute;
+            transform: rotate(315deg);
+            margin-left: 0.4em;
+            margin-top: -0.5em;
+        }
+
+        .aab-icon-css {
+            width: 4.2em;
+            height: 0px;
+            background: #707070;
+            border-bottom: 2.1em solid #3799d6d6;
+            border-top: 2.1em solid #3799d6;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 2.9em;
+            left: 19.9em;
+        }
+
+        .aab-icon-css::after {
+            content: "CSS";
+            color: white;
+            font-size: 1em;
+            position: absolute;
+            transform: rotate(315deg);
+            margin-left: 0.4em;
+            margin-top: -2.9em;
+        }
+
+        .aab-icon-css-img {
+            background-image: url(img/Css.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 2.45em;
+            height: 2.45em;
+            transform: rotate(315deg);
+            margin-left: 1em;
+            margin-top: -1em;
+        }
+    </style>
+
+
+    <!-- <style>
+ 
+/* .neural-network {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+z-index: -1;
+} */
+
+/* .aab-img-panel{
+    -webkit-filter: brightness(50%);
+filter: brightness(50%);
+} */
+
+.particle {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 4px;
+height: 4px;
+border-radius: 50%;
+background-color: #fff;
+animation: animateParticle 2s linear infinite;
+}
+
+@keyframes animateParticle {
+0% {
+opacity: 0;
+transform: translate(-50%, -50%) scale(0);
+}
+25% {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1);
+}
+50% {
+opacity: 0;
+transform: translate(-50%, -50%) scale(0);
+}
+75% {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1);
+}
+100% {
+opacity: 0;
+transform: translate(-50%, -50%) scale(0);
+}
+}
+</style> -->
+    <!-- <script>
+    // Crear la animación de la red neuronal
+function animateNeuralNetwork() {
+ const network = document.querySelector('.neural-network');
+ const numParticles = 20; // Número de partículas de la red neuronal
+
+ // Crear las partículas y añadirlas al fondo
+ for (let i = 0; i < numParticles; i++) {
+   const particle = document.createElement('div');
+   particle.className = 'particle';
+   network.appendChild(particle);
+
+   // Asignar posiciones aleatorias a las partículas
+   const randomX = Math.random() * window.innerWidth;
+   const randomY = Math.random() * window.innerHeight;
+   particle.style.left = `${randomX}px`;
+   particle.style.top = `${randomY}px`;
+ }
+
+ // Animar las partículas
+ const particles = network.querySelectorAll('.particle');
+ particles.forEach((particle, index) => {
+   const animationDelay = Math.random() * 10;
+   particle.style.animationDelay = `${animationDelay}s`;
+ });
+}
+
+// Iniciar la animación cuando la página haya cargado
+window.addEventListener('load', () => {
+ animateNeuralNetwork();
+});
+
+   </script> -->
+</body>
+
+</html>

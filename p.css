@@ -1,0 +1,231 @@
+#aabLogo {
+    margin: auto;
+    display: table;            
+    width: 100em;
+    height: 57em;    
+    position: relative;       
+}
+.aab-img-fondo{
+    width: 88%;
+    opacity: .5;
+}
+
+.aab-compu {
+    z-index: 10;
+    position: absolute;
+    position: absolute;
+    top: 19%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.aab-pantalla {
+    width: 40em;
+    height: 19em;
+    border-bottom: 30px solid rgb(105 32 121);
+    border-top: 15px solid rgb(105 32 121);
+    border-left: 15px solid rgb(105 32 121);
+    border-right: 15px solid rgb(105 32 121);
+    border-radius: 15px;
+    background: rgb(179 78 198);
+    overflow: hidden;
+    margin: auto;
+}
+
+.aab-pantalla-color {
+    height: 33em;
+    width: 10em;
+    background: rgb(254 245 219 / 40%);
+    transform: rotate(319deg);
+    float: right;
+    margin-top: -58px;
+    margin-right: -42px;
+}
+
+.aab-taclado {
+    width: 43em;
+    height: 0px;
+    border-bottom: 30px solid rgb(105 32 121);
+    border-top: 15px solid rgb(179 78 198);
+    border-left: 14px solid rgb(105 32 121);
+    border-right: 14px solid rgb(105 32 121);
+    border-radius: 24px;
+    border-top-left-radius: 73px;
+    margin: auto;
+    border-top-right-radius: 73px;
+}
+
+#aab-icon-mi {
+    background-image: url(microsoft.svg);
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    color: white;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 20em;
+    z-index: 9;
+    margin-left: 20em;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
+
+#aab-icon-vs {
+    background-image: url(vs.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 11em;
+    height: 11em;
+    position: absolute;
+    color: white;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 4em;
+    z-index: 9;
+    margin-left: 15em;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
+
+.aab-csharp {
+    background-image: url(csharp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 11em;
+    height: 11em;
+}
+
+.aab-circulo {
+    width: 70em;
+    height: 30em;
+    border: 5px dashed #692079d9;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 5em;
+}
+
+.aab-icon-css {
+    width: 11em;
+    height: 11em;
+}
+
+.aab-icon-net {
+    width: 14em;
+    height: 0px;
+    background: #707070;
+    border-bottom: 7em solid #b34ec6;
+    border-top: 7em solid #9440a2;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -32px;
+    left: 17em;
+}
+
+.aab-icon-net::after {
+    content: ".NET";
+    color: white;
+    font-size: 1.8em;
+    position: absolute;
+    transform: rotate(315deg);
+    font-weight: bold;
+    margin-left: 14px;
+    margin-top: -14px;
+}
+
+.aab-icon-html {
+    width: 10em;
+    height: 0px;
+    background: #707070;
+    border-bottom: 5em solid #00bbf2;
+    border-top: 5em solid #00a4d2;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+
+    top: -32px;
+    left: 34em;
+}
+
+.aab-icon-html::after {
+    content: "HTML";
+    color: white;
+    font-size: 1.2em;
+    position: absolute;
+    transform: rotate(315deg);
+    font-weight: bold;
+    margin-left: 7px;
+    margin-top: -14px;
+}
+
+.aab-icon-js {
+    width: 10em;
+    height: 0px;
+    background: #707070;
+    border-bottom: 5em solid #692079;
+    border-top: 5em solid #551c62;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -23px;
+    left: 47em;
+}
+
+.aab-icon-js::after {
+    content: "Js";
+    color: white;
+    font-size: 2.3em;
+    position: absolute;
+    transform: rotate(315deg);
+    margin-left: 24px;
+    margin-top: -24px;
+}
+
+.aab-icon-css {
+    width: 12em;
+    height: 0px;
+    background: #707070;
+    border-bottom: 6em solid #3799d6d6;
+    border-top: 6em solid #3799d6;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 30px;
+    left: 62em;
+}
+
+.aab-icon-css::after {
+    content: "CSS";
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    transform: rotate(315deg);
+    margin-left: 14px;
+    margin-top: -60px;
+}
+
+.aab-icon-css-img {
+    background-image: url(Css.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 7em;
+    height: 7em;
+    transform: rotate(315deg);
+    margin-left: 25px;
+    margin-top: -22px;
+}
